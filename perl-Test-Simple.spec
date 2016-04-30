@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.001014
-Release  : 8
+Release  : 9
 URL      : http://www.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.001014.tar.gz
 Source0  : http://www.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.001014.tar.gz
 Summary  : 'Basic utilities for writing tests.'
