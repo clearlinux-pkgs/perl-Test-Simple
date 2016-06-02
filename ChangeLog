@@ -1,3 +1,22 @@
+1.302022  2016-05-28 17:53:11-07:00 America/Los_Angeles
+
+    - Improve thread checks to better detect broken 5.10 builds
+    - Use thread checks to skip/run t/Legacy/Regression/637.t
+
+1.302021  2016-05-20 21:47:17-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Files.t should warn, not die, if it cannot remove its temp dir.
+    - VMS fixes for Files.t and IPC system
+
+1.302020  2016-05-18 11:54:15-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Many micro-opts from Graham Knop (haarg)
+    - Spelling fixes and tests from Karen Etheridge (ether)
+    - Fix leaky File.t file so that tmp doesn't fill up
+    - Move some modules out of the known broken list in xt tests
+    - Add Test2 based tools to downstream testing
+    - Change when PID/TID are stashed (for forkprove)
+
 1.302019  2016-05-18 08:16:39-07:00 America/Los_Angeles
 
     - POD Spelling fixes
@@ -1458,7 +1477,7 @@ Test-Stream 1.302024  2015-11-04 11:15:14-08:00 America/Los_Angeles
 
 Test-Stream 1.302023  2015-11-04 00:12:49-08:00 America/Los_Angeles (TRIAL RELEASE)
 
-    - String and Number comparisons no longer allow undef (backwords incompatible change, sorry)
+    - String and Number comparisons no longer allow undef (backwards-incompatible change, sorry)
     - Doc spelling fixes (Evan Zacks)
     - Add Undef type in deep check
     - Fix docs for buffered subtests (Noticed by Magnolia.K)
