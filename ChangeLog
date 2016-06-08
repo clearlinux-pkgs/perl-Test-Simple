@@ -1,3 +1,21 @@
+1.302026  2016-06-07 07:53:30-07:00 America/Los_Angeles
+
+    - No Changes from 1.302025-TRIAL
+
+1.302025  2016-06-06 22:38:12-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Make sure enabling culling/shm sets pid and tid (Fix #679)
+
+1.302024  2016-06-02 20:27:35-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add Generic event type
+
+1.302023  2016-06-02 08:09:54-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Do not fail if Test2::API::Breakage cannot load (rare 5.10.0 issue)
+    - Potential fix for t/Legacy/Regression/637.t
+    - Make t/Legacy/Regression/637.t AUTHOR_TESTING for now
+
 1.302022  2016-05-28 17:53:11-07:00 America/Los_Angeles
 
     - Improve thread checks to better detect broken 5.10 builds
