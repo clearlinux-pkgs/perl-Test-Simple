@@ -1,3 +1,20 @@
+1.302030  2016-06-18 19:02:55-07:00 America/Los_Angeles
+
+    - No changes from last DEV release
+
+1.302029  2016-06-17 06:56:54-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Properly skip thread test when threads are broken
+
+1.302028  2016-06-16 19:21:58-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add 'inherit_trace' param to run_subtest
+
+1.302027  2016-06-15 09:42:32-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - use pre_filter instead of filter for TODO in Test::Builder (Fix $683)
+    - Fix typos in transitions doc (#681)
+
 1.302026  2016-06-07 07:53:30-07:00 America/Los_Angeles
 
     - No Changes from 1.302025-TRIAL
