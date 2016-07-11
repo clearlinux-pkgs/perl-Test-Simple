@@ -1,3 +1,15 @@
+1.302040  2016-07-09 16:55:00-07:00 America/Los_Angeles
+
+    - No changes from last trial
+
+1.302039  2016-07-07 22:01:02-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add Info event for better diagnostics
+
+1.302038  2016-07-05 07:00:18-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix broken MANIFEST.SKIP entries (#689)
+
 1.302037  2016-07-04 10:09:00-07:00 America/Los_Angeles
 
     - No changes from trial
