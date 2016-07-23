@@ -1,3 +1,23 @@
+1.302045  2016-07-18 09:05:15-07:00 America/Los_Angeles
+
+    - No changes from last TRIAL release
+
+1.302044  2016-07-13 17:56:20-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix test that segv'd on older perls
+
+1.302043  2016-07-12 09:37:31-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix TODO in mixed T2/TB subtests
+
+1.302042  2016-07-11 20:30:35-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix IPC event ordering bug
+
+1.302041  2016-07-09 17:01:45-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Work around IPC bug on windows
+
 1.302040  2016-07-09 16:55:00-07:00 America/Los_Angeles
 
     - No changes from last trial
