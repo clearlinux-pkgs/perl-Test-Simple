@@ -1,5 +1,5 @@
 PKG_NAME := perl-Test-Simple
-URL := http://www.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.302052.tar.gz
+URL := http://www.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.302059.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
