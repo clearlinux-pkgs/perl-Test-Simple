@@ -1,3 +1,43 @@
+1.302059  2016-09-25 12:32:21-07:00 America/Los_Angeles
+
+    - No changes from last trial
+
+1.302058  2016-09-21 10:46:13-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Mask warning when comparing $@ in Test2::API::Context
+
+1.302057  2016-09-18 12:12:18-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Doc fixes
+    - Win32 color support in Test::Builder::Tester
+    - Support v-strings in is_deeply
+    - A streamed subtest run inside a buffered subtest will be automatically
+      converted to a buffered subtest. Otherwise the output from inside the
+      subtest is lost entirely. (#721)
+
+1.302056  2016-09-12 09:03:49-07:00 America/Los_Angeles
+
+    - Minor typo fix
+    - No logic chnges since last trial
+
+1.302055  2016-08-30 12:13:32-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix special case of ok line ending in \
+    - Improve a test that captures STDERR/STDOUT (Thanks HAARG)
+
+1.302054  2016-08-20 16:21:44-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Allow '#' and '\n' in ok names
+
+1.302053  2016-08-17 21:22:55-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix skip_all in require in intercept (#696)
+    - Documentation of what is better in Test2 (#663)
+    - Document Test::Builder::Tester plan limitations
+    - Document limitations in is_deeply (#595)
+    - Better documentation of done_testing purpose (#151)
+    - Make ctx->send_event detect termination events (#707)
+
 1.302052  2016-08-13 14:34:07-07:00 America/Los_Angeles
 
     - No Changes from last trial
