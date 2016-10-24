@@ -1,3 +1,24 @@
+1.302062  2016-10-20 06:16:08-07:00 America/Los_Angeles
+
+    - No changes from last trial
+
+1.302061  2016-09-30 14:49:19-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Removed a warning when using a non-TAP formatter with Test::Builder
+      about the formatter not "no_header" and "no_diag". This happened even if
+      the alternative formatter class implemented these attributes.
+    - When finalize is called on a formatter, it now receives one more
+      argument, a boolean indicating whether or not the call is for a subtest
+      or not.
+
+1.302060  2016-09-25 12:46:46-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Formatters now have terminate() and finalize() methods. These are called
+      when there is a skip_all or bail event (terminate) or when a test suite
+      is exiting normally (finalize). This allows formatters to finalize their
+      output, which is important for any sort of document-oriented format (as
+      opposed to a stream format like TAP). (#723)
+
 1.302059  2016-09-25 12:32:21-07:00 America/Los_Angeles
 
     - No changes from last trial
