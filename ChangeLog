@@ -1,3 +1,93 @@
+1.302078  2017-03-01 15:24:12-08:00 America/Los_Angeles
+
+    - No changes since last trial
+
+1.302077  2017-02-19 14:34:30-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix #762, newlines for todo subtest
+    - Revisit #637, fix rare race condition it created
+
+1.302076  2017-02-01 19:38:42-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix crash when TB->reset used inside subtest
+
+1.302075  2017-01-10 19:39:28-08:00 America/Los_Angeles
+
+    - No changes, just marking a stable release
+
+1.302074  2017-01-08 11:41:44-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add 'cid' to trace
+    - Add signatures to trace
+    - Add related() to events
+    - Now it is possible to check if events are related
+    - Add 'no_fork' option to run_subtest()
+
+1.302073  2016-12-18 23:02:54-08:00 America/Los_Angeles
+
+    - No changes from last trial
+
+1.302072  2016-12-18 01:08:12-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Expose tools.pl as Test2::Tools::Tiny
+
+1.302071  2016-12-17 12:08:29-08:00 America/Los_Angeles
+
+    - No changes since last trial release
+
+1.302070  2016-12-14 21:32:47-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Added two new event classes, Test2::Event::Encoding and
+      Test2::Event::TAP::Version. These are primarily being added for the
+      benefit of Test2::Harness now, but they could be useful for other Test2
+      event consumer tools in the future. Implemented by Dave Rolsky (#743).
+
+1.302069  2016-12-12 15:03:04-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Generate HashBase from Object::HashBase which has been split out
+    - When a subtest is marked as todo, all of its contained Ok and Subtest
+      events are now updated so that they return true for
+      $e->effective_pass. Implemented by Dave Rolsky. (#742)
+
+1.302068  2016-12-03 13:50:01-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add TO_JSON and from_json methods to Test2::Event and Test2::Trace::Util
+      to faciliate transferring event data between processes. Implemented by
+      Dave Rolsky. (#741).
+
+1.302067  2016-11-23 07:37:56-08:00 America/Los_Angeles
+
+    - Fix context test for recent blead.
+
+1.302066  2016-11-08 07:58:39-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Handle cases where SysV IPC can be available but not enabled
+    - Import 'context' into Test2::IPC, it is used by 'cull'
+    - Propogate warnings settings to use_ok (#736)
+
+1.302065  2016-10-30 11:54:37-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Set the TEST_ACTIVE env var to true
+    - Set the TEST2_ACTIVE env var to true
+    - Fix the oldest bug still in the bug list (#6)
+      This fixes cmp_ok output is some confusing cases
+    - Update travis config
+    - Add missing author deps
+    - Fix handling of negative pid's on windows
+    - Add can() to Test::Tester::Delegate (despite deprecation)
+    - Fix some minor test issues
+
+1.302064  2016-10-24 21:03:24-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Repo management improvements
+    - Better handling of info vs diag in ->send_event
+    - Fix test that used 'parent'
+    - Better handling of non-bumping failures (#728)
+
+1.302063  2016-10-23 21:31:20-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix double release when 'throw' is used in context_do()
+
 1.302062  2016-10-20 06:16:08-07:00 America/Los_Angeles
 
     - No changes from last trial
