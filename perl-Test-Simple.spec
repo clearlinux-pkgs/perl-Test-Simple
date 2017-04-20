@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302078
-Release  : 25
+Release  : 26
 URL      : http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.302078.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Simple-1.302078.tar.gz
 Summary  : 'Basic utilities for writing tests.'
@@ -29,6 +29,9 @@ doc components for the perl-Test-Simple package.
 %setup -q -n Test-Simple-1.302078
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
@@ -42,7 +45,7 @@ fi
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test || :
 
 %install
