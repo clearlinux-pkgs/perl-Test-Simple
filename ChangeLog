@@ -1,3 +1,36 @@
+1.302085  2017-05-01 19:24:37-07:00 America/Los_Angeles
+
+    - No Changes since last TRIAL
+
+1.302084  2017-04-29 20:42:48-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Better IO management
+    - Allow access to the STDERR/STDOUT Test2::API uses
+    - Formatters should use the Test2::API handles
+
+1.302083  2017-04-14 10:55:26-07:00 America/Los_Angeles
+
+    - Update some breakage info for Test::More::Prefix and Test::DBIx::Class::Schema
+
+1.302082  2017-04-11 12:56:24-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix test that incorrectly called private function as method
+
+1.302081  2017-04-06 10:39:37-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix threads timeout for older perls (as best we can)
+
+1.302080  2017-04-04 20:24:55-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Timeout when waiting for child procs and threads (#765)
+    - Fix SIGSYS localization issue (#758)
+    - Fix outdated docs (#759, #754)
+    - Fix bail-out in buffered subtest (#747)
+
+1.302079  2017-04-03 12:12:02-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fixes for '. in @INC' changes (#768)
+
 1.302078  2017-03-01 15:24:12-08:00 America/Los_Angeles
 
     - No changes since last trial
