@@ -1,3 +1,12 @@
+1.302113  2017-11-20 14:04:16-08:00 America/Los_Angeles
+
+    - Fix SIGPIPE in IPC test
+    - Mark a test as usually AUTHOR_TESTING only
+
+1.302112  2017-11-20 06:43:16-08:00 America/Los_Angeles
+
+    - Fix test on threaded 5.8
+
 1.302111  2017-11-18 09:54:33-08:00 America/Los_Angeles
 
     - Remove debugging from previous trial
