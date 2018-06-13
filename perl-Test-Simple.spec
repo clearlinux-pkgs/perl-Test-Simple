@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302136
-Release  : 48
+Release  : 49
 URL      : https://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302136.tar.gz
 Source0  : https://www.cpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302136.tar.gz
 Summary  : 'Basic utilities for writing tests.'
@@ -46,7 +46,7 @@ export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make TEST_VERBOSE=1 test || :
+make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
