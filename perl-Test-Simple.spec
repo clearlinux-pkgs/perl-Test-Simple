@@ -4,14 +4,13 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302138
-Release  : 50
+Release  : 51
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302138.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302138.tar.gz
 Summary  : 'Basic utilities for writing tests.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
-Requires: perl-Test-Simple-license
-Requires: perl-Test-Simple-man
+Requires: perl-Test-Simple-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -19,20 +18,21 @@ NAME
 Test2 - Framework for writing test tools that all work together.
 DESCRIPTION
 
+%package dev
+Summary: dev components for the perl-Test-Simple package.
+Group: Development
+Provides: perl-Test-Simple-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-Test-Simple package.
+
+
 %package license
 Summary: license components for the perl-Test-Simple package.
 Group: Default
 
 %description license
 license components for the perl-Test-Simple package.
-
-
-%package man
-Summary: man components for the perl-Test-Simple package.
-Group: Default
-
-%description man
-man components for the perl-Test-Simple package.
 
 
 %prep
@@ -60,12 +60,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-Test-Simple
-cp LICENSE %{buildroot}/usr/share/doc/perl-Test-Simple/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Test-Simple
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Test-Simple/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -74,79 +74,75 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/Formatter.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/IO/Scalar.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/Module.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/Tester.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/Tester/Color.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Builder/TodoDiag.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/More.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Simple.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Tester.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Tester/Capture.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Tester/CaptureRunner.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Tester/Delegate.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/Tutorial.pod
-/usr/lib/perl5/site_perl/5.26.1/Test/use/ok.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/API.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/API/Breakage.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/API/Context.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/API/Instance.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/API/Stack.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Bail.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Diag.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Encoding.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Exception.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Fail.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Generic.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Note.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Ok.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Pass.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Plan.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Skip.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Subtest.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/TAP/Version.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/V2.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Event/Waiting.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/About.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Amnesty.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Assert.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Control.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Error.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Hub.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Info.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Meta.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Parent.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Plan.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Render.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/EventFacet/Trace.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Formatter.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Formatter/TAP.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Hub.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Hub/Interceptor.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Hub/Interceptor/Terminator.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Hub/Subtest.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/IPC.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/IPC/Driver.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/IPC/Driver/Files.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Tools/Tiny.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Transition.pod
-/usr/lib/perl5/site_perl/5.26.1/Test2/Util.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Util/ExternalMeta.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Util/Facets2Legacy.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Util/HashBase.pm
-/usr/lib/perl5/site_perl/5.26.1/Test2/Util/Trace.pm
-/usr/lib/perl5/site_perl/5.26.1/ok.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/Formatter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/IO/Scalar.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/Module.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/Tester.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/Tester/Color.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Builder/TodoDiag.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/More.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Simple.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Tester.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Tester/Capture.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Tester/CaptureRunner.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Tester/Delegate.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Test/use/ok.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/API.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/API/Breakage.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/API/Context.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/API/Instance.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/API/Stack.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Bail.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Diag.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Encoding.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Exception.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Fail.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Generic.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Note.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Ok.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Pass.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Plan.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Skip.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Subtest.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/TAP/Version.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/V2.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Event/Waiting.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/About.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Amnesty.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Assert.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Control.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Error.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Hub.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Info.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Meta.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Parent.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Plan.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Render.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/EventFacet/Trace.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Formatter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Formatter/TAP.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Hub.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Hub/Interceptor.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Hub/Interceptor/Terminator.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Hub/Subtest.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/IPC.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/IPC/Driver.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/IPC/Driver/Files.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Tools/Tiny.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Transition.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Util.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Util/ExternalMeta.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Util/Facets2Legacy.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Util/HashBase.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test2/Util/Trace.pm
+/usr/lib/perl5/vendor_perl/5.26.1/ok.pm
 
-%files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-Test-Simple/LICENSE
-
-%files man
+%files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Test2.3
 /usr/share/man/man3/Test2::API.3
@@ -214,3 +210,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test::Tutorial.3
 /usr/share/man/man3/Test::use::ok.3
 /usr/share/man/man3/ok.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Test-Simple/LICENSE
