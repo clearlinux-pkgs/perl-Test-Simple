@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302162
-Release  : 70
+Release  : 71
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302162.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302162.tar.gz
 Summary  : Basic utilities for writing tests
