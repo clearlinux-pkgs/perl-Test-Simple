@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302190
-Release  : 104
+Release  : 105
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302190.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302190.tar.gz
 Summary  : 'Basic utilities for writing tests.'
@@ -167,76 +167,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/Formatter.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/IO/Scalar.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/Module.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/Tester.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/Tester/Color.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Builder/TodoDiag.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/More.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Simple.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Tester.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Tester/Capture.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Tester/CaptureRunner.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Tester/Delegate.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/Tutorial.pod
-/usr/lib/perl5/vendor_perl/5.34.0/Test/use/ok.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/Breakage.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/Context.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/Instance.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/InterceptResult.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/InterceptResult/Event.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/InterceptResult/Facet.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/InterceptResult/Hub.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/InterceptResult/Squasher.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/API/Stack.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Bail.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Diag.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Encoding.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Exception.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Fail.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Generic.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Note.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Ok.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Pass.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Plan.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Skip.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Subtest.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/TAP/Version.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/V2.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Event/Waiting.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/About.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Amnesty.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Assert.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Control.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Error.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Hub.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Info.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Info/Table.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Meta.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Parent.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Plan.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Render.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/EventFacet/Trace.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Formatter.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Formatter/TAP.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Hub.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Hub/Interceptor.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Hub/Interceptor/Terminator.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Hub/Subtest.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/IPC.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/IPC/Driver.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/IPC/Driver/Files.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Tools/Tiny.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Transition.pod
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Util.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Util/ExternalMeta.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Util/Facets2Legacy.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Util/HashBase.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test2/Util/Trace.pm
-/usr/lib/perl5/vendor_perl/5.34.0/ok.pm
+/usr/lib/perl5/*
