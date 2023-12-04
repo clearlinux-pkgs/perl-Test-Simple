@@ -6,10 +6,10 @@
 # autospec commit: e661f3a
 #
 Name     : perl-Test-Simple
-Version  : 1.302197
-Release  : 114
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302197.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302197.tar.gz
+Version  : 1.302198
+Release  : 115
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302198.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302198.tar.gz
 Summary  : 'Basic utilities for writing tests.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -53,10 +53,10 @@ perl components for the perl-Test-Simple package.
 
 
 %prep
-%setup -q -n Test-Simple-1.302197
-cd %{_builddir}/Test-Simple-1.302197
+%setup -q -n Test-Simple-1.302198
+cd %{_builddir}/Test-Simple-1.302198
 pushd ..
-cp -a Test-Simple-1.302197 buildavx2
+cp -a Test-Simple-1.302198 buildavx2
 popd
 
 %build
