@@ -6,17 +6,16 @@
 # autospec commit: 5424026
 #
 Name     : perl-Test-Simple
-Version  : 1.302206
-Release  : 126
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302206.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302206.tar.gz
+Version  : 1.302207
+Release  : 127
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302207.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302207.tar.gz
 Summary  : 'Basic utilities for writing tests.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Test-Simple-license = %{version}-%{release}
 Requires: perl-Test-Simple-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
-BuildRequires : perl(JSON::MaybeXS)
 BuildRequires : perl(Term::Table)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -55,10 +54,10 @@ perl components for the perl-Test-Simple package.
 
 
 %prep
-%setup -q -n Test-Simple-1.302206
-cd %{_builddir}/Test-Simple-1.302206
+%setup -q -n Test-Simple-1.302207
+cd %{_builddir}/Test-Simple-1.302207
 pushd ..
-cp -a Test-Simple-1.302206 buildavx2
+cp -a Test-Simple-1.302207 buildavx2
 popd
 
 %build
@@ -145,6 +144,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test2::Compare::String.3
 /usr/share/man/man3/Test2::Compare::Undef.3
 /usr/share/man/man3/Test2::Compare::Wildcard.3
+/usr/share/man/man3/Test2::Env.3
 /usr/share/man/man3/Test2::Event.3
 /usr/share/man/man3/Test2::Event::Bail.3
 /usr/share/man/man3/Test2::Event::Diag.3
