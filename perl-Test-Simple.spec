@@ -7,12 +7,13 @@
 #
 Name     : perl-Test-Simple
 Version  : 1.302208
-Release  : 129
+Release  : 130
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302208.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302208.tar.gz
 Summary  : 'Basic utilities for writing tests.'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Test-Simple-license = %{version}-%{release}
 Requires: perl-Test-Simple-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Term::Table)
@@ -33,6 +34,14 @@ Requires: perl-Test-Simple = %{version}-%{release}
 
 %description dev
 dev components for the perl-Test-Simple package.
+
+
+%package license
+Summary: license components for the perl-Test-Simple package.
+Group: Default
+
+%description license
+license components for the perl-Test-Simple package.
 
 
 %package perl
@@ -73,6 +82,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Test-Simple
+cp %{_builddir}/Test-Simple-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Test-Simple/83e59468e9fc21267dfe533b5b85bce6ea4c282d || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -281,6 +292,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test::Tutorial.3
 /usr/share/man/man3/Test::use::ok.3
 /usr/share/man/man3/ok.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Test-Simple/83e59468e9fc21267dfe533b5b85bce6ea4c282d
 
 %files perl
 %defattr(-,root,root,-)
