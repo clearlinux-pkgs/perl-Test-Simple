@@ -6,10 +6,10 @@
 # autospec commit: 94c6be0
 #
 Name     : perl-Test-Simple
-Version  : 1.302208
-Release  : 130
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302208.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302208.tar.gz
+Version  : 1.302209
+Release  : 131
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302209.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302209.tar.gz
 Summary  : 'Basic utilities for writing tests.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -54,10 +54,10 @@ perl components for the perl-Test-Simple package.
 
 
 %prep
-%setup -q -n Test-Simple-1.302208
-cd %{_builddir}/Test-Simple-1.302208
+%setup -q -n Test-Simple-1.302209
+cd %{_builddir}/Test-Simple-1.302209
 pushd ..
-cp -a Test-Simple-1.302208 buildavx2
+cp -a Test-Simple-1.302209 buildavx2
 popd
 
 %build
@@ -264,6 +264,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test2::Util::HashBase.3
 /usr/share/man/man3/Test2::Util::Importer.3
 /usr/share/man/man3/Test2::Util::Ref.3
+/usr/share/man/man3/Test2::Util::Sig.3
 /usr/share/man/man3/Test2::Util::Stash.3
 /usr/share/man/man3/Test2::Util::Sub.3
 /usr/share/man/man3/Test2::Util::Table.3
